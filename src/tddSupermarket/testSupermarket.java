@@ -60,6 +60,16 @@ public class testSupermarket {
 			int expectedSum = (int)((150 + 350 + 400 + 100 + 80 + 100) * 1.08) + (420 + 440);// タバコは内税
 			assertEquals(expectedSum, cart.checkout());
 		}
+	}
+	
+	
+	public static class タバコの消費税計算処理を考慮する{
+		private Cart cart;
+		
+		@Before
+		public void 事前処理() {
+			cart = new Cart();
+		}
 		
 		@Test
 		public void タバコ1個・メンソールタバコ2個・りんご1個を購入する(){
@@ -75,5 +85,4 @@ public class testSupermarket {
 			assertEquals(expectedSum, cart.checkout());
 		}
 	}
-
 }
