@@ -4,8 +4,21 @@ import tddSupermarket.Item;
 
 public class Apple implements Item {
 
-	public Apple(int i) {
-		// TODO Auto-generated constructor stub
+	private int price = 100;
+	private int count;
+
+	public Apple(int count) {
+		this.count = count;
+	}
+
+	@Override
+	public int getPrice() {
+		return price;
+	}
+
+	@Override
+	public int getCount() {
+		return count;
 	}
 
 }
