@@ -57,7 +57,7 @@ public class testSupermarket {
 			cart.add(tea);
 			cart.add(coffee);
 			
-			int expectedSum = (int)((150 + 350 + 400 + 420 + 440 + 100 + 80 + 100) * 1.08);
+			int expectedSum = (int)((150 + 350 + 400 + 100 + 80 + 100) * 1.08 + (420 + 440));// タバコは内税
 			assertEquals(expectedSum, cart.checkout());
 		}
 	}

@@ -10,7 +10,7 @@ public class TobaccoMenthol implements Item {
 	}
 
 	@Override
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
 

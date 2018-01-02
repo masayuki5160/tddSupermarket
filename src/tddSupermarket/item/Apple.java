@@ -10,8 +10,8 @@ public class Apple implements Item {
 	}
 
 	@Override
-	public int getPrice() {
-		return price;
+	public double getPrice() {
+		return price * taxRatio;
 	}
 
 	@Override

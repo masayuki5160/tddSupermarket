@@ -1,6 +1,8 @@
 package tddSupermarket.item;
 
 public interface Item {
-	public int getPrice();
+	public double getPrice();
 	public int getCount();
+	
+	public static double taxRatio = 1.08;
 }
