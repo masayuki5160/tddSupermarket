@@ -1,7 +1,6 @@
 package tddSupermarket;
 
 import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;
@@ -40,6 +39,29 @@ public class testSupermarket {
 			
 			int sum = cart.checkout();
 			assertEquals(100 , sum);
+		}
+		
+		@Test
+		public void ぶどう・のり弁・しゃけ弁・タバコ・メンソールタバコ・ライター・お茶・コーヒーを1個ずつ購入する() {
+			Grape grape = new Grape(1);
+			Noriben noriben = new Noriben(1);
+			Shakeben shakeben = new Shakeben(1);
+			Tobacco tobacco = new Tobacco(1);
+			TobaccoMenthol tobaccoMenthol = new TobaccoMenthol(1);
+			Lighter lighter = new Lighter(1);
+			Tea tea = new Tea(1);
+			Coffee coffee = new Coffee(1);
+			
+			cart.add(grape);
+			cart.add(noriben);
+			cart.add(shakeben);
+			cart.add(tobacco);
+			cart.add(tobaccoMenthol);
+			cart.add(lighter);
+			cart.add(tea);
+			cart.add(coffee);
+			
+			assertEquals(150+350+400+420+440+100+80+100, cart.checkout());
 		}
 	}
 
