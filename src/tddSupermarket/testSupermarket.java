@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 public class testSupermarket {
 
 	public static class 商品番号と個数から合計金額を計算する{
+		
 		@Test
 		public void りんご1個みかん2個から合計金額を計算する() {
 			Apple apple = new Apple(1);
@@ -21,6 +22,17 @@ public class testSupermarket {
 			int sum = cart.checkout();
 			
 			assertEquals(100 + 40 * 2, sum);
+		}
+		
+		@Test
+		public void りんご1個から合計金額を計算する() {
+			Apple apple = new Apple(1);
+			
+			Cart cart = new Cart();
+			cart.add(apple);
+			
+			int sum = cart.checkout();
+			assertEquals(100 , sum);
 		}
 	}
 
