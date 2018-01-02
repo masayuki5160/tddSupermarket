@@ -10,7 +10,7 @@ import tddSupermarket.item.*;
 @RunWith(Enclosed.class)
 public class testSupermarket {
 
-	public static class 商品番号と個数から合計金額を計算する{
+	public static class 商品番号と個数から税込の合計金額を計算する{
 		
 		private Cart cart;
 		
@@ -27,19 +27,14 @@ public class testSupermarket {
 			cart.add(apple);
 			cart.add(mikan);
 			
-			int sum = cart.checkout();
-			
-			assertEquals(100 + 40 * 2, sum);
+			assertEquals((int)((100 + 40 * 2) * 1.08), cart.checkout());
 		}
 		
 		@Test
 		public void りんご1個から合計金額を計算する() {
 			Apple apple = new Apple(1);
-			
 			cart.add(apple);
-			
-			int sum = cart.checkout();
-			assertEquals(100 , sum);
+			assertEquals((int)(100 * 1.08), cart.checkout());
 		}
 		
 		@Test
@@ -62,7 +57,8 @@ public class testSupermarket {
 			cart.add(tea);
 			cart.add(coffee);
 			
-			assertEquals(150+350+400+420+440+100+80+100, cart.checkout());
+			int expectedSum = (int)((150 + 350 + 400 + 420 + 440 + 100 + 80 + 100) * 1.08);
+			assertEquals(expectedSum, cart.checkout());
 		}
 	}
 
