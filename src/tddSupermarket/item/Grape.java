@@ -1,6 +1,6 @@
-package tddSupermarket;
+package tddSupermarket.item;
 
-import tddSupermarket.Item;
+import tddSupermarket.item.Item;
 
 public class Grape implements Item {
 

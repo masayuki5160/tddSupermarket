@@ -2,6 +2,8 @@ package tddSupermarket;
 
 import java.util.*;
 
+import tddSupermarket.item.Item;
+
 public class Cart {
 
 	private Collection<Item> items = new ArrayList<Item>();

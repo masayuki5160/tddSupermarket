@@ -1,13 +1,13 @@
-package tddSupermarket;
+package tddSupermarket.item;
 
-import tddSupermarket.Item;
+import tddSupermarket.item.Item;
 
-public class Lighter implements Item {
+public class Tea implements Item {
 
-	private int price = 100;
+	private int price = 80;
 	private int count;
 
-	public Lighter(int count) {
+	public Tea(int count) {
 		this.count = count;
 	}
 

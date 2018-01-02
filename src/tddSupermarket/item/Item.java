@@ -1,4 +1,4 @@
-package tddSupermarket;
+package tddSupermarket.item;
 
 public interface Item {
 	public int getPrice();
