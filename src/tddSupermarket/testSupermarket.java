@@ -5,17 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
-
-import tddSupermarket.item.Apple;
-import tddSupermarket.item.Coffee;
-import tddSupermarket.item.Grape;
-import tddSupermarket.item.Lighter;
-import tddSupermarket.item.Mikan;
-import tddSupermarket.item.Noriben;
-import tddSupermarket.item.Shakeben;
-import tddSupermarket.item.Tea;
-import tddSupermarket.item.Tobacco;
-import tddSupermarket.item.TobaccoMenthol;
+import tddSupermarket.item.*;
 
 @RunWith(Enclosed.class)
 public class testSupermarket {
