@@ -1,5 +1,6 @@
 package tddSupermarket;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,7 +28,8 @@ public class testSupermarket {
 			cart.add(apple);
 			cart.add(mikan);
 			
-			assertEquals((int)((100 + 40 * 2) * 1.08), cart.checkout());
+			int expected = (int)((100 + 40 * 2) * 1.08);
+			assertThat(cart.checkout(), is(expected));
 		}
 		
 		@Test
