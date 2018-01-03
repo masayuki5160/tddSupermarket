@@ -24,7 +24,6 @@ public class testSupermarket {
 		public void りんご1個みかん2個から合計金額を計算する() {
 			Apple apple = new Apple(1);
 			Mikan mikan = new Mikan(2);
-			
 			cart.add(apple);
 			cart.add(mikan);
 			
@@ -36,7 +35,9 @@ public class testSupermarket {
 		public void りんご1個から合計金額を計算する() {
 			Apple apple = new Apple(1);
 			cart.add(apple);
-			assertEquals((int)(100 * 1.08), cart.checkout());
+			
+			int expected = (int)(100 * 1.08);
+			assertThat(cart.checkout(), is(expected));
 		}
 		
 		@Test
@@ -59,8 +60,9 @@ public class testSupermarket {
 			cart.add(tea);
 			cart.add(coffee);
 			
-			int expectedSum = (int)((150 + 350 + 400 + 100 + 80 + 100) * 1.08) + (420 + 440);// タバコは内税
-			assertEquals(expectedSum, cart.checkout());
+			int expected = (int)((150 + 350 + 400 + 100 + 80 + 100) * 1.08) + (420 + 440);// タバコは内税
+			assertEquals(expected, cart.checkout());
+			assertThat(cart.checkout(), is(expected));
 		}
 	}
 	
@@ -83,8 +85,9 @@ public class testSupermarket {
 			cart.add(tobaccoMenthol);
 			cart.add(apple);
 			
-			int expectedSum = (int)(100 * 1.08) + 420 + (440 * 2);// タバコは内税
-			assertEquals(expectedSum, cart.checkout());
+			int expected = (int)(100 * 1.08) + 420 + (440 * 2);// タバコは内税
+			assertEquals(expected, cart.checkout());
+			assertThat(cart.checkout(), is(expected));
 		}
 	}
 }
